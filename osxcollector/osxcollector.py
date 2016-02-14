@@ -1793,7 +1793,7 @@ def main():
         Logger.log_error('Must run as root!\n')
         return
     
-    Logger.log_error(args.section_list[0])
+    print args.section_list[0]
     
     # Create an incident ID
     prefix = args.incident_prefix
