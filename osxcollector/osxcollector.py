@@ -1786,15 +1786,15 @@ def main():
 
     strict = args.strict
     
-    sys.stderr.write(args.section_list)
-    
     DEBUG_MODE = args.debug
     ROOT_PATH = args.rootpath
 
     if ROOT_PATH == '/' and (euid != 0 and egid != 0):
         Logger.log_error('Must run as root!\n')
         return
-
+    
+    Logger.log_error(args.section_list)
+    
     # Create an incident ID
     prefix = args.incident_prefix
     incident_id = '{0}-{1}'.format(prefix, datetime.now().strftime('%Y_%m_%d-%H_%M_%S'))
