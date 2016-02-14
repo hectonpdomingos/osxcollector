@@ -1785,7 +1785,9 @@ def main():
     args = parser.parse_args()
 
     strict = args.strict
-
+    
+    sys.stderr.write(args.section_list)
+    
     DEBUG_MODE = args.debug
     ROOT_PATH = args.rootpath
 
